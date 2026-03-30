@@ -1,0 +1,22 @@
+{
+  "name": "nomade",
+  "private": true,
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:client": "npm run dev --workspace=client",
+    "dev:server": "npm run dev --workspace=server",
+    "build": "npm run build --workspaces",
+    "db:generate": "npm run db:generate --workspace=server",
+    "db:migrate": "npm run db:migrate --workspace=server",
+    "db:push": "npm run db:push --workspace=server",
+    "db:sqlite:push": "npm run db:sqlite:push --workspace=server",
+    "db:sqlite:studio": "npm run db:sqlite:studio --workspace=server"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
