@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { getSupabaseConfigError, supabase } from "../lib/supabase";
-import logo from "../../dist/assets/nomadeLogo-DhPRdFPn.jpg";
+import logo from "../assets/nomadeLogo.jpg";
 
 export function WelcomePage() {
   const [error, setError] = useState<string | null>(null);
