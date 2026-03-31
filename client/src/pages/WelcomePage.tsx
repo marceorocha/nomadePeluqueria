@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { getSupabaseConfigError, supabase } from "../lib/supabase";
-import logo from "../../public/nomadeLogo.jpg";
+import logo from "../../dist/assets/nomadeLogo-DhPRdFPn.jpg";
 
 export function WelcomePage() {
   const [error, setError] = useState<string | null>(null);
@@ -15,7 +15,7 @@ export function WelcomePage() {
       const { error: authError } = await supabase.auth.signInWithOAuth({
         provider: "google",
         options: {
-          redirectTo: `${window.location.origin}/reservas`,
+          redirectTo: `${window.location.origin}${import.meta.env.BASE_URL}reservas`,
         },
       });
       if (authError) {
