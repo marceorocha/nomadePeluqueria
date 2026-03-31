@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { getSupabaseConfigError, supabase } from "../lib/supabase";
+import logo from "../../public/nomadeLogo.jpg";
 
 export function WelcomePage() {
   const [error, setError] = useState<string | null>(null);
@@ -29,7 +30,7 @@ export function WelcomePage() {
     <div className="relative min-h-screen overflow-hidden bg-gradient-to-b from-[#F8F0E4] via-stone-50 to-stone-100 p-6">
       <div className="pointer-events-none absolute inset-0 z-0 flex items-center justify-center">
         <img
-          src="/nomadeLogo.jpg"
+          src={logo}
           alt="Nomade Peluqueria decorativo"
           className="h-auto w-[95vw] max-w-[1400px] object-contain opacity-10"
         />
@@ -37,7 +38,7 @@ export function WelcomePage() {
 
       <div className="relative z-10 mx-auto flex min-h-[calc(100vh-3rem)] max-w-3xl flex-col items-center justify-center rounded-3xl border border-[#E9DDCA] bg-white/88 p-8 text-center shadow-sm backdrop-blur-sm">
         <img
-          src="/nomadeLogo.jpg" 
+          src={logo} 
           alt="Nomade Peluqueria"
           className="h-auto w-full max-w-[620px] object-contain"
         />
